@@ -1,34 +1,32 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SmartLink from './smartLink';
-import { Row, Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 // Immagine profilo
 import profile_image from '../images/profile-image.jpeg';
 //import logo from '../style/logo.svg'
 
 const Header: React.FC = () => {
-  var headerStyle = {
-    backgroundColor: '#282c34',
-    color: 'white'
+  var style = {
+    backgroundColor: '#282c34'
   };
 
   var imageStyle = {
-    margin: '10px 30px 10px 50px',
     maxWidth: '50%',
     height: 'auto',
     borderRadius: '50%',
-    border: 'solid 3px #FFF'
+    border: 'solid 3px #FFF',
+    marginLeft: '20px'
   };
 
   var profileStyle = {
     fontSize: '20px',
-    margin: '0px 0px 0px 30px',
-    marginTop: '30px'
+    marginLeft: '20px'
   };
 
   return (
-    <div style={headerStyle}>
+    <div style={style}>
       <Row>
         <img src={profile_image} style={imageStyle} alt="profile" />
         <p style={profileStyle}>

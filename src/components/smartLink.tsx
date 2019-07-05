@@ -7,7 +7,10 @@ interface linkProps {
   link: string;
   icon: [IconPrefix, IconName];
 }
-const style = { margin: '5px 10px 0px 0px' };
+const style = {
+  margin: '5px 10px 0px 20px'
+};
+
 const SmartLink: React.SFC<linkProps> = props => {
   return (
     <a
@@ -16,7 +19,7 @@ const SmartLink: React.SFC<linkProps> = props => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <FontAwesomeIcon icon={props.icon} color="white" size="lg" />
+      <FontAwesomeIcon icon={props.icon} color="green" size="lg" />
     </a>
   );
 };
