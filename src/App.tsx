@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './style/logo.svg';
+import Header from './components/header';
+// Fontawesome
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab as brandsIcon } from '@fortawesome/free-brands-svg-icons';
+import * as solidIcon from '@fortawesome/free-solid-svg-icons';
+
 import './style/App.css';
 
 const App: React.FC = () => {
+  library.add(brandsIcon, solidIcon.faRandom, solidIcon.faReply);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
     </div>
   );
 };
