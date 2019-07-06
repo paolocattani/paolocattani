@@ -1,39 +1,43 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SmartLink from './smartLink';
-import { Row } from 'react-bootstrap';
+import { Image, ListGroup } from 'react-bootstrap';
 
 // Immagine profilo
 import profile_image from '../images/profile-image.jpeg';
-//import logo from '../style/logo.svg'
 
-const Header: React.FC = () => {
-  var style = {
-    backgroundColor: '#282c34'
+const Sidebar: React.FC = () => {
+  var divStyle = {
+    width: '100%',
+    textAlign: 'center' as 'center'
   };
 
   var imageStyle = {
     maxWidth: '50%',
     height: 'auto',
-    borderRadius: '50%',
-    border: 'solid 3px #FFF',
-    marginLeft: '20px'
+    border: 'solid 3px #FFF'
   };
 
   var profileStyle = {
-    fontSize: '20px',
-    marginLeft: '20px'
+    fontSize: '20px'
   };
 
+  var botStyle = {
+    position: 'absolute' as 'absolute',
+    bottom: '0',
+    marginBottom: '10px'
+  };
   return (
-    <div style={style}>
-      <Row>
-        <img src={profile_image} style={imageStyle} alt="profile" />
-        <p style={profileStyle}>
-          <FontAwesomeIcon icon={'random'} /> Paolo Cattani
-        </p>
-      </Row>
-      <Row>
+    <div style={divStyle}>
+      <Image style={imageStyle} src={profile_image} roundedCircle fluid />
+      <p style={profileStyle}> Paolo Cattani </p>
+      <ListGroup>
+        <ListGroup.Item color={'green'}> HOME </ListGroup.Item>
+        <ListGroup.Item> STUDY </ListGroup.Item>
+        <ListGroup.Item> PROVA </ListGroup.Item>
+        <ListGroup.Item> PROVA2 </ListGroup.Item>
+      </ListGroup>
+      <div style={botStyle}>
         <SmartLink
           link="https://www.facebook.com/paolo.cattani.9"
           icon={['fab', 'facebook-f']}
@@ -46,9 +50,9 @@ const Header: React.FC = () => {
           link="https://www.linkedin.com/in/paolo-cattani-5913a5127/"
           icon={['fab', 'linkedin-in']}
         />
-      </Row>
+      </div>
     </div>
   );
 };
 
-export default Header;
+export default Sidebar;
