@@ -25,8 +25,8 @@ const App: React.FC = () => {
     solidIcon.faUniversity
   );
 
-  const rightWidth = '10';
-  const leftWidth = '2';
+  const rightWidth = 10;
+  const leftWidth = 2;
   //const sidebar1stColor = '#6390ba';
   const sidebar1stColor = '#ff8400';
   const sidebar2ndColor = '#ffffff';
@@ -42,10 +42,10 @@ const App: React.FC = () => {
     <div className="App">
       <Container style={containerStyle}>
         <Row>
-          <Col xs={leftWidth} md={leftWidth} style={sidebarStyle}>
+          <Col xs={leftWidth + 2} md={leftWidth} style={sidebarStyle}>
             <Sidebar color={sidebar2ndColor} />
           </Col>
-          <Col xs={rightWidth} md={rightWidth}>
+          <Col xs={rightWidth - 2} md={rightWidth}>
             <p> prova </p>
           </Col>
         </Row>
