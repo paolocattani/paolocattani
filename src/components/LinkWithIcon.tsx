@@ -14,13 +14,17 @@ interface linkProps {
   size?: SizeProp;
 }
 const style = {
-  margin: '5px 10px 0px 10px',
   display: 'inlime-block'
+};
+
+const iconStyle = {
+  fontSize: '4vmax',
+  padding: '0.5vmax'
 };
 
 class LinkWithIcon extends React.Component<linkProps> {
   static defaultProps = {
-    size: 'sm',
+    size: 'xs',
     color: 'white'
   };
 
@@ -36,6 +40,7 @@ class LinkWithIcon extends React.Component<linkProps> {
           icon={this.props.icon}
           color={this.props.color}
           size={this.props.size}
+          style={iconStyle}
         />
         {this.props.children}
       </a>

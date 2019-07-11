@@ -14,7 +14,7 @@ const Sidebar: React.SFC<sidebarProps> = props => {
   var divStyle = {
     height: '-webkit-fill-available',
     // Diplay
-    '-webkit-align-items': 'flex-start' /* Safari 7.0+ */,
+    WebkitAlignItems: 'flex-start' /* Safari 7.0+ */,
     display: 'flex',
     flexDirection: 'column' as 'column',
     // Align options
@@ -24,15 +24,17 @@ const Sidebar: React.SFC<sidebarProps> = props => {
   var imageStyle = {
     maxWidth: '70%',
     border: 'solid 3px ' + props.color,
-    margin: '20px 0px 0px 0px'
+    margin: '1vmax  0vmax 0vmax 0vmax'
   };
 
   var botStyle = {
-    margin: '120px 0px 20px 0px'
+    margin: '10vmax 0vmax 1vmax 0vmax',
+    fontSize: '1.5vmax'
   };
 
   var listGroupStyle = {
-    margin: 'auto'
+    margin: 'auto',
+    maxWidth: '-webkit-fill-available'
   };
 
   var listGroupItemStyle = {

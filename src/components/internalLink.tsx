@@ -3,18 +3,17 @@ import '../style/internalLink.css';
 
 interface linkProps {
   link: string;
-  color?: string;
 }
+const style = {
+  fontSize: '1.5vmax'
+};
 
 class InternalLink extends React.Component<linkProps> {
-  static defaultProps = {
-    size: 'sm',
-    color: 'white'
-  };
+  static defaultProps = {};
 
   render() {
     return (
-      <a id="internalLink" href={this.props.link}>
+      <a id="internalLink" href={this.props.link} style={style}>
         {this.props.children}
       </a>
     );

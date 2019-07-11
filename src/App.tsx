@@ -32,7 +32,7 @@ const App: React.FC = () => {
   const sidebar2ndColor = '#ffffff';
 
   var containerStyle = {
-    margin: 0
+    margin: '0vmax'
   };
   var sidebarStyle = {
     backgroundColor: sidebar1stColor
