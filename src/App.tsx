@@ -4,6 +4,7 @@ import React from 'react';
 import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core';
 import { fab as brandsIcon } from '@fortawesome/free-brands-svg-icons';
 import * as solidIcon from '@fortawesome/free-solid-svg-icons';
+import * as regularIcon from '@fortawesome/free-regular-svg-icons';
 // Boostrap
 import { Container, Col, Row } from 'react-bootstrap';
 
@@ -16,25 +17,33 @@ interface appState {
 }
 
 const App: React.FC = () => {
-  fontAwesomeLibrary.add(brandsIcon, solidIcon.faRandom, solidIcon.faReply);
+  fontAwesomeLibrary.add(
+    brandsIcon,
+    solidIcon.faRandom,
+    solidIcon.faReply,
+    solidIcon.faIdCard,
+    solidIcon.faUniversity
+  );
+
+  const rightWidth = '10';
+  const leftWidth = '2';
+  //const sidebar1stColor = '#6390ba';
+  const sidebar1stColor = '#ff8400';
+  const sidebar2ndColor = '#ffffff';
 
   var containerStyle = {
     margin: 0
   };
   var sidebarStyle = {
-    backgroundColor: 'red',
-    height: '-webkit-fill-available'
+    backgroundColor: sidebar1stColor
   };
-
-  const rightWidth = '10';
-  const leftWidth = '2';
 
   return (
     <div className="App">
       <Container style={containerStyle}>
         <Row>
           <Col xs={leftWidth} md={leftWidth} style={sidebarStyle}>
-            <Sidebar />
+            <Sidebar color={sidebar2ndColor} />
           </Col>
           <Col xs={rightWidth} md={rightWidth}>
             <p> prova </p>

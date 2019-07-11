@@ -1,54 +1,91 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import SmartLink from './smartLink';
+import LinkWithIcon from './LinkWithIcon';
+import InternalLink from './internalLink';
 import { Image, ListGroup } from 'react-bootstrap';
 
 // Immagine profilo
 import profile_image from '../images/profile-image.jpeg';
 
-const Sidebar: React.FC = () => {
+interface sidebarProps {
+  color: string;
+}
+
+const Sidebar: React.SFC<sidebarProps> = props => {
   var divStyle = {
-    width: '100%',
-    textAlign: 'center' as 'center'
+    height: '-webkit-fill-available',
+    // Diplay
+    '-webkit-align-items': 'flex-start' /* Safari 7.0+ */,
+    display: 'flex',
+    flexDirection: 'column' as 'column',
+    // Align options
+    textAlign: '-webkit-center' as 'center'
   };
 
   var imageStyle = {
-    maxWidth: '50%',
-    height: 'auto',
-    border: 'solid 3px #FFF'
-  };
-
-  var profileStyle = {
-    fontSize: '20px'
+    maxWidth: '70%',
+    border: 'solid 3px ' + props.color,
+    margin: '20px 0px 0px 0px'
   };
 
   var botStyle = {
-    position: 'absolute' as 'absolute',
-    bottom: '0',
-    marginBottom: '10px'
+    margin: '120px 0px 20px 0px'
   };
+
+  var listGroupStyle = {
+    margin: 'auto'
+  };
+
+  var listGroupItemStyle = {
+    backgroundColor: 'inherit',
+    color: 'white'
+  };
+
   return (
     <div style={divStyle}>
+      {/* Image */}
       <Image style={imageStyle} src={profile_image} roundedCircle fluid />
-      <p style={profileStyle}> Paolo Cattani </p>
-      <ListGroup>
-        <ListGroup.Item color={'green'}> HOME </ListGroup.Item>
-        <ListGroup.Item> STUDY </ListGroup.Item>
-        <ListGroup.Item> PROVA </ListGroup.Item>
-        <ListGroup.Item> PROVA2 </ListGroup.Item>
+
+      {/* List */}
+      <ListGroup style={listGroupStyle}>
+        <ListGroup.Item style={listGroupItemStyle}>
+          <InternalLink link="#Home"> Home </InternalLink>
+        </ListGroup.Item>
+        <ListGroup.Item style={listGroupItemStyle}>
+          <InternalLink link="#Experience"> Experience </InternalLink>
+        </ListGroup.Item>
+        <ListGroup.Item style={listGroupItemStyle}>
+          <InternalLink link="#Study"> Study </InternalLink>
+        </ListGroup.Item>
+        <ListGroup.Item style={listGroupItemStyle}>
+          <InternalLink link="#Knowledge"> Knowledge </InternalLink>
+        </ListGroup.Item>
+        <ListGroup.Item style={listGroupItemStyle}>
+          <InternalLink link="#Portfolio"> Portfolio </InternalLink>
+        </ListGroup.Item>
+        <ListGroup.Item style={listGroupItemStyle}>
+          <InternalLink link="#contacts"> Contacts </InternalLink>
+        </ListGroup.Item>
       </ListGroup>
+
+      {/* External Link */}
       <div style={botStyle}>
-        <SmartLink
+        <LinkWithIcon
           link="https://www.facebook.com/paolo.cattani.9"
           icon={['fab', 'facebook-f']}
+          color={props.color}
+          size="2x"
         />
-        <SmartLink
+        <LinkWithIcon
           link="https://github.com/paolocattani"
           icon={['fab', 'github-alt']}
+          color={props.color}
+          size="2x"
         />
-        <SmartLink
+        <LinkWithIcon
           link="https://www.linkedin.com/in/paolo-cattani-5913a5127/"
           icon={['fab', 'linkedin-in']}
+          color={props.color}
+          size="2x"
         />
       </div>
     </div>

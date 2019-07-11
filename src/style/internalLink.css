@@ -1,0 +1,12 @@
+#internalLink:link {
+  color: white;
+}
+#internalLink:visited {
+  color: white;
+}
+#internalLink:hover {
+  color: white;
+}
+#internalLink:active {
+  color: black;
+}
