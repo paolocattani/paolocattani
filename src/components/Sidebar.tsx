@@ -64,7 +64,7 @@ const Sidebar: React.SFC<sidebarProps> = props => {
           <InternalLink link="#Portfolio"> Portfolio </InternalLink>
         </ListGroup.Item>
         <ListGroup.Item style={listGroupItemStyle}>
-          <InternalLink link="#contacts"> Contacts </InternalLink>
+          <InternalLink link="#Contacts"> Contacts </InternalLink>
         </ListGroup.Item>
       </ListGroup>
 

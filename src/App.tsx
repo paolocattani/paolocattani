@@ -11,7 +11,7 @@ import { Container, Col, Row } from 'react-bootstrap';
 
 // Components
 import Sidebar from './components/Sidebar';
-//import Contacts from './components/Contacts';
+import Contacts from './components/Contacts';
 
 interface appState {
   isSidebarVisibile: boolean;
@@ -44,6 +44,17 @@ const App: React.FC = () => {
   const rowStyle = {
     height: '100vh'
   };
+
+  var rightStyle = {
+    height: '100%',
+    // Diplay
+    WebkitAlignItems: 'flex-start' /* Safari 7.0+ */,
+    display: 'flex',
+    flexDirection: 'column' as 'column',
+    // Align options
+    textAlign: '-webkit-center' as 'center'
+  };
+
   return (
     <div className="App">
       <Container style={containerStyle}>
@@ -51,7 +62,9 @@ const App: React.FC = () => {
           <Col xs={leftWidth + resizeValue} md={leftWidth} style={sidebarStyle}>
             <Sidebar color={sidebar2ndColor} />
           </Col>
-          <Col xs={rightWidth - resizeValue} md={rightWidth}></Col>
+          <Col xs={rightWidth - resizeValue} md={rightWidth} style={rightStyle}>
+            <Contacts id={'Contacts'} />
+          </Col>
         </Row>
       </Container>
     </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/LinkWithIcon.css';
+import '../style/linkWithIcon.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   IconName,
