@@ -5,7 +5,7 @@ interface linkProps {
   link: string;
 }
 const style = {
-  fontSize: '1.5vmax'
+  fontSize: '2vh'
 };
 
 class InternalLink extends React.Component<linkProps> {

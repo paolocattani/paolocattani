@@ -5,12 +5,13 @@ import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core
 import { fab as brandsIcon } from '@fortawesome/free-brands-svg-icons';
 import * as solidIcon from '@fortawesome/free-solid-svg-icons';
 import * as regularIcon from '@fortawesome/free-regular-svg-icons';
+
 // Boostrap
 import { Container, Col, Row } from 'react-bootstrap';
 
 // Components
-//import Header from './components/header';
-import Sidebar from './components/sidebar';
+import Sidebar from './components/Sidebar';
+import Contacts from './components/Contacts';
 
 interface appState {
   isSidebarVisibile: boolean;
@@ -27,27 +28,30 @@ const App: React.FC = () => {
 
   const rightWidth = 10;
   const leftWidth = 2;
+  const resizeValue = 2;
+
   //const sidebar1stColor = '#6390ba';
   const sidebar1stColor = '#ff8400';
   const sidebar2ndColor = '#ffffff';
 
-  var containerStyle = {
-    margin: '0vmax'
+  const containerStyle = {
+    margin: 0
   };
-  var sidebarStyle = {
+  const sidebarStyle = {
     backgroundColor: sidebar1stColor
   };
 
+  const rowStyle = {
+    height: '100vh'
+  };
   return (
     <div className="App">
       <Container style={containerStyle}>
-        <Row>
-          <Col xs={leftWidth + 2} md={leftWidth} style={sidebarStyle}>
+        <Row style={rowStyle}>
+          <Col xs={leftWidth + resizeValue} md={leftWidth} style={sidebarStyle}>
             <Sidebar color={sidebar2ndColor} />
           </Col>
-          <Col xs={rightWidth - 2} md={rightWidth}>
-            <p> prova </p>
-          </Col>
+          <Col xs={rightWidth - resizeValue} md={rightWidth}></Col>
         </Row>
       </Container>
     </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../style/LinkWithIcon.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   IconName,
@@ -14,12 +14,12 @@ interface linkProps {
   size?: SizeProp;
 }
 const style = {
-  display: 'inlime-block'
+  display: 'inline-block'
 };
 
 const iconStyle = {
-  fontSize: '4vmax',
-  padding: '0.5vmax'
+  fontSize: '5vh',
+  padding: '0.5vh'
 };
 
 class LinkWithIcon extends React.Component<linkProps> {
@@ -41,6 +41,7 @@ class LinkWithIcon extends React.Component<linkProps> {
           color={this.props.color}
           size={this.props.size}
           style={iconStyle}
+          className={'xlinkWithIcon'}
         />
         {this.props.children}
       </a>

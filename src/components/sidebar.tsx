@@ -1,6 +1,6 @@
 import React from 'react';
 import LinkWithIcon from './LinkWithIcon';
-import InternalLink from './internalLink';
+import InternalLink from './InternalLink';
 import { Image, ListGroup } from 'react-bootstrap';
 
 // Immagine profilo
@@ -12,7 +12,7 @@ interface sidebarProps {
 
 const Sidebar: React.SFC<sidebarProps> = props => {
   var divStyle = {
-    height: '-webkit-fill-available',
+    height: '100%',
     // Diplay
     WebkitAlignItems: 'flex-start' /* Safari 7.0+ */,
     display: 'flex',
@@ -22,19 +22,18 @@ const Sidebar: React.SFC<sidebarProps> = props => {
   };
 
   var imageStyle = {
-    maxWidth: '70%',
-    border: 'solid 3px ' + props.color,
-    margin: '1vmax  0vmax 0vmax 0vmax'
+    maxWidth: '60%',
+    border: 'solid 0.5px ' + props.color,
+    margin: '1vw 0vw'
   };
 
   var botStyle = {
-    margin: '10vmax 0vmax 1vmax 0vmax',
-    fontSize: '1.5vmax'
+    margin: '1vw 0vw'
   };
 
   var listGroupStyle = {
-    margin: 'auto',
-    maxWidth: '-webkit-fill-available'
+    maxWidth: '100%',
+    margin: 'auto'
   };
 
   var listGroupItemStyle = {
@@ -45,7 +44,7 @@ const Sidebar: React.SFC<sidebarProps> = props => {
   return (
     <div style={divStyle}>
       {/* Image */}
-      <Image style={imageStyle} src={profile_image} roundedCircle fluid />
+      <Image style={imageStyle} src={profile_image} thumbnail />
 
       {/* List */}
       <ListGroup style={listGroupStyle}>
