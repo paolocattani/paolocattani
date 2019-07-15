@@ -4,14 +4,14 @@ import React from 'react';
 import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core';
 import { fab as brandsIcon } from '@fortawesome/free-brands-svg-icons';
 import * as solidIcon from '@fortawesome/free-solid-svg-icons';
-import * as regularIcon from '@fortawesome/free-regular-svg-icons';
+//import * as regularIcon from '@fortawesome/free-regular-svg-icons';
 
 // Boostrap
 import { Container, Col, Row } from 'react-bootstrap';
 
 // Components
 import Sidebar from './components/Sidebar';
-import Contacts from './components/Contacts';
+//import Contacts from './components/Contacts';
 
 interface appState {
   isSidebarVisibile: boolean;
