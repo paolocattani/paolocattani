@@ -33,6 +33,7 @@ const sidebar2ndColor = '#ffffff';
 const containerStyle = { margin: 0 };
 const sidebarStyle = { backgroundColor: sidebar1stColor };
 const rowStyle = { height: '100vh' };
+const h1Style = { color: 'yellow', fontSize: '6vh' };
 const rightStyle = {
   height: '100%',
   // Diplay
@@ -87,6 +88,12 @@ const App: React.FC = () => {
             xl={rightWidth}
             style={rightStyle}
           >
+            <h1 style={h1Style}>
+              {' '}
+              <em>
+                <b>Work in progress !</b>
+              </em>
+            </h1>
             <Contacts id={'Contacts'} />
           </Col>
         </Row>
