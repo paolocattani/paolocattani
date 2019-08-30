@@ -1,20 +1,16 @@
+// React
 import React, { useEffect, useState } from 'react';
-
 // Fontawesome
+//import * as regularIcon from '@fortawesome/free-regular-svg-icons';
 import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core';
 import { fab as brandsIcon } from '@fortawesome/free-brands-svg-icons';
 import * as solidIcon from '@fortawesome/free-solid-svg-icons';
-//import * as regularIcon from '@fortawesome/free-regular-svg-icons';
-
 // Boostrap
 import { Container, Col, Row } from 'react-bootstrap';
-
-// Components
-import Sidebar from './components/Sidebar';
-import Contacts from './components/Contacts';
 // Background image
 import backgroundImage from './images/background.jpeg';
-import backgroundImage2 from './images/background2.jpeg';
+// Components
+import { Contacts, Sidebar, Home, Software } from './components';
 
 // Interface
 interface appState {
@@ -30,25 +26,35 @@ const resizeValue = 2;
 const sidebar1stColor = '#ff8400';
 const sidebar2ndColor = '#ffffff';
 
-const containerStyle = { margin: 0 };
-const sidebarStyle = { backgroundColor: sidebar1stColor };
-const rowStyle = { height: '100vh' };
-const h1Style = { color: 'yellow', fontSize: '6vh' };
-const rightStyle = {
-  height: '100%',
-  // Diplay
-  WebkitAlignItems: 'flex-start' /* Safari 7.0+ */,
-  display: 'flex',
-  flexDirection: 'column' as 'column',
-  // Align options
-  textAlign: '-webkit-center' as 'center',
-  // Image
+const containerStyle = {
+  margin: 0,
+  // Image Props
   backgroundImage: `url(${backgroundImage})`,
   backgroundPosition: 'top center',
   backgroundRepet: 'repeat'
 };
 
+const rowStyle = { height: '100%' };
+const h1Style = { color: 'yellow', fontSize: '6vh' };
+const sidebarStyle = {
+  top: 0,
+  left: 0,
+  height: '100%',
+  position: 'fixed' as 'fixed',
+  backgroundColor: sidebar1stColor
+};
+const rightStyle = {
+  // Diplay
+  display: 'flex',
+  flexDirection: 'column' as 'column',
+  // Align options
+  textAlign: '-webkit-center' as 'center',
+  WebkitAlignItems: 'flex-start' /* Safari 7.0+ */
+};
+
+// Application
 const App: React.FC = () => {
+  // Loads fontawesome icon
   fontAwesomeLibrary.add(
     brandsIcon,
     solidIcon.faRandom,
@@ -77,9 +83,16 @@ const App: React.FC = () => {
             lg={leftWidth}
             xl={leftWidth}
             style={sidebarStyle}
-            className={'sticky-top'}
           >
             <Sidebar color={sidebar2ndColor} />
+          </Col>
+          <Col
+            xs={leftWidth + resizeValue}
+            md={leftWidth}
+            lg={leftWidth}
+            xl={leftWidth}
+          >
+            {/* This is just a placeholder to keep the left margin */}
           </Col>
           <Col
             xs={rightWidth - resizeValue}
@@ -94,6 +107,9 @@ const App: React.FC = () => {
                 <b>Work in progress !</b>
               </em>
             </h1>
+            <Home id={'Home'} />
+            <Software id={'Software'} />
+            <Contacts id={'Study'} />
             <Contacts id={'Contacts'} />
           </Col>
         </Row>

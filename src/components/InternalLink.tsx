@@ -1,14 +1,14 @@
 import React from 'react';
 import '../style/internalLink.css';
 
-interface props {
+interface iProps {
   link: string;
 }
 const style = {
   fontSize: '2vh'
 };
 
-class InternalLink extends React.Component<props> {
+class InternalLink extends React.Component<iProps> {
   static defaultProps = {};
 
   render() {

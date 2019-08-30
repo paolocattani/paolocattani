@@ -6,46 +6,37 @@ import { Image, ListGroup } from 'react-bootstrap';
 // Immagine profilo
 import profile_image from '../images/profile-image.jpeg';
 
-interface sidebarProps {
+// Interface
+interface iProps {
   color: string;
 }
 
-const Sidebar: React.SFC<sidebarProps> = props => {
-  var divStyle = {
-    height: '100%',
-    // Diplay
-    WebkitAlignItems: 'flex-start' /* Safari 7.0+ */,
-    display: 'flex',
-    flexDirection: 'column' as 'column',
-    // Align options
-    textAlign: '-webkit-center' as 'center'
-  };
+// Style consts
 
-  var imageStyle = {
+const botStyle = { margin: '1vw 0vw' };
+const listGroupStyle = { maxWidth: '100%', margin: 'auto' };
+const listGroupItemStyle = { backgroundColor: 'inherit', color: 'white' };
+const divStyle = {
+  height: '100%',
+  // Diplay
+  WebkitAlignItems: 'flex-start' /* Safari 7.0+ */,
+  display: 'flex',
+  flexDirection: 'column' as 'column',
+  // Align options
+  textAlign: '-webkit-center' as 'center'
+};
+
+const Sidebar: React.SFC<iProps> = props => {
+  const imageStyle = {
     maxWidth: '60%',
     border: 'solid 0.5px ' + props.color,
     margin: '1vw 0vw'
-  };
-
-  var botStyle = {
-    margin: '1vw 0vw'
-  };
-
-  var listGroupStyle = {
-    maxWidth: '100%',
-    margin: 'auto'
-  };
-
-  var listGroupItemStyle = {
-    backgroundColor: 'inherit',
-    color: 'white'
   };
 
   return (
     <div style={divStyle}>
       {/* Image */}
       <Image style={imageStyle} src={profile_image} thumbnail />
-
       {/* List */}
       <ListGroup style={listGroupStyle}>
         <ListGroup.Item style={listGroupItemStyle}>
@@ -58,7 +49,7 @@ const Sidebar: React.SFC<sidebarProps> = props => {
           <InternalLink link="#Study"> Study </InternalLink>
         </ListGroup.Item>
         <ListGroup.Item style={listGroupItemStyle}>
-          <InternalLink link="#Knowledge"> Knowledge </InternalLink>
+          <InternalLink link="#Knowledge"> Softwares </InternalLink>
         </ListGroup.Item>
         <ListGroup.Item style={listGroupItemStyle}>
           <InternalLink link="#Portfolio"> Portfolio </InternalLink>

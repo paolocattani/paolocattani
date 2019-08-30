@@ -7,22 +7,16 @@ import {
   SizeProp
 } from '@fortawesome/fontawesome-svg-core';
 
-interface linkProps {
+interface iProps {
   link: string;
   icon: [IconPrefix, IconName];
   color?: string;
   size?: SizeProp;
 }
-const style = {
-  display: 'inline-block'
-};
+const style = { display: 'inline-block' };
+const iconStyle = { fontSize: '5vh', padding: '0.5vh' };
 
-const iconStyle = {
-  fontSize: '5vh',
-  padding: '0.5vh'
-};
-
-class LinkWithIcon extends React.Component<linkProps> {
+class LinkWithIcon extends React.Component<iProps> {
   static defaultProps = {
     size: 'xs',
     color: 'white'
