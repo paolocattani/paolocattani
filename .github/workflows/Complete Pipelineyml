@@ -29,13 +29,6 @@ jobs:
       - name: Build project
         run: npm run build
       # Deploy
-      - attach_workspace:
-          at: docs/_build
-      - name: Install and configure dependencies
-          command: |
-            npm install -g --silent gh-pages
-            git config user.email "${{ secrets.CI_EMAIL }}"
-            git config user.name "${{ secrets.CI_NAME }}"
       - name : Deploy on github pages
         run : npm run deploy
 
