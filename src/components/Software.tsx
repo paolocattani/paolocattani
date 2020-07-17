@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, ListGroup, CardGroup, CardDeck } from 'react-bootstrap';
+import { Card, ListGroup, CardDeck } from 'react-bootstrap';
 
 // Props interface
 interface iProps {

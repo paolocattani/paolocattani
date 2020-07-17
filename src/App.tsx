@@ -62,7 +62,7 @@ const App: React.FC = () => {
     solidIcon.faIdCard,
     solidIcon.faUniversity
   );
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [, setWindowWidth] = useState(window.innerWidth);
 
   const handleWindowResize = () => {
     setWindowWidth(window.innerWidth);

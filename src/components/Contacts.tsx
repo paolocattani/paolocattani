@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, ListGroup, Accordion, Button } from 'react-bootstrap';
+import { Card, ListGroup, Accordion } from 'react-bootstrap';
 import LinkWithIcon from './LinkWithIcon';
 
 // Props interface
