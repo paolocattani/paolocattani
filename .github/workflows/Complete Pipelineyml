@@ -28,8 +28,6 @@ jobs:
       # Build project
       - name: Build project
         run: npm run build
-      - attach_workspace:
-          at: build/
       - name: Install and configure dependencies
           command: |
             npm install -g --silent gh-pages
