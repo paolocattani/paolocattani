@@ -37,7 +37,7 @@ jobs:
             git config user.email "${{ secrets.CI_EMAIL }}"
             git config user.name "${{ secrets.CI_NAME }}"
       - name : Deploy on github pages
-          run : npm run deploy
+        run : npm run deploy
 
   check-quality:
     runs-on: ubuntu-latest
