@@ -21,16 +21,24 @@ jobs:
       - uses: actions/checkout@v2
       # Setup Node.js environment
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2.1.0
+          uses: actions/setup-node@v2.1.0
       # Install Dependecies
       - name: Install Dependecies
-        run: npm i
+          run: npm i
       # Build project
       - name: Build project
-        run: npm run build
+          run: npm run build
       # Deploy
+      - attach_workspace:
+          at: docs/_build
+      - run:
+          name: Install and configure dependencies
+          command: |
+            npm install -g --silent gh-pages
+            git config user.email "${{ secrets.CI_EMAIL }}"
+            git config user.name "${{ secrets.CI_NAME }}"
       - name : Deploy on github pages
-        run : npm run deploy
+          run : npm run deploy
 
   check-quality:
     runs-on: ubuntu-latest
