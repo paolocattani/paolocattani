@@ -29,8 +29,8 @@ jobs:
       - name: Build project
         run: npm run build
       # Deploy
-      - name : Deploy on github pages
-        run : npm run deploy
+      #- name : Deploy on github pages
+      #  run : npm run deploy
 
   check-quality:
     runs-on: ubuntu-latest
