@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{CSSProperties} from 'react';
 import LinkWithIcon from './LinkWithIcon';
 import InternalLink from './InternalLink';
 import { Image, ListGroup } from 'react-bootstrap';
@@ -13,24 +13,37 @@ interface iProps {
 
 // Style consts
 
-const botStyle = { margin: '1vw 0vw' };
-const listGroupStyle = { maxWidth: '100%', margin: 'auto' };
-const listGroupItemStyle = { backgroundColor: 'inherit', color: 'white' };
-const divStyle = {
+const botStyle:CSSProperties = { 
+  margin: '1vh auto' ,
+  display: 'flex',
+  justifyContent: 'space-between',
+  width: '80%'
+};
+const listGroupStyle :CSSProperties= {
+  width: '80%',
+  display: 'flex',
+  margin: '4vh auto',
+  justifyContent : 'space-between'
+};
+const listGroupItemStyle:CSSProperties= { backgroundColor: 'inherit', color: 'white' };
+const divStyle:CSSProperties = {
   height: '100%',
   // Diplay
   WebkitAlignItems: 'flex-start' /* Safari 7.0+ */,
   display: 'flex',
-  flexDirection: 'column' as 'column',
+  flexDirection: 'column',
   // Align options
-  textAlign: '-webkit-center' as 'center'
+  textAlign: 'center',
+  justifyContent : 'space-between'
 };
 
 const Sidebar: React.SFC<iProps> = props => {
-  const imageStyle = {
-    maxWidth: '60%',
+
+  const imageStyle: CSSProperties = {
+    maxWidth: '10vw',
     border: 'solid 0.5px ' + props.color,
-    margin: '1vw 0vw'
+    margin: '4vh auto',
+    borderRadius : '5px'
   };
 
   return (

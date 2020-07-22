@@ -20,7 +20,7 @@ interface appState {
 // Constants
 const rightWidth = 10;
 const leftWidth = 2;
-const resizeValue = 2;
+const resizeValue = 1;
 
 //const sidebar1stColor = '#6390ba';
 const sidebar1stColor = '#ff8400';
@@ -80,29 +80,16 @@ const App: React.FC = () => {
           <Col
             xs={leftWidth + resizeValue}
             md={leftWidth}
-            lg={leftWidth}
-            xl={leftWidth}
             style={sidebarStyle}
           >
             <Sidebar color={sidebar2ndColor} />
           </Col>
           <Col
-            xs={leftWidth + resizeValue}
-            md={leftWidth}
-            lg={leftWidth}
-            xl={leftWidth}
-          >
-            {/* This is just a placeholder to keep the left margin */}
-          </Col>
-          <Col
-            xs={rightWidth - resizeValue}
-            md={rightWidth}
-            lg={rightWidth}
-            xl={rightWidth}
+            xs={{span: rightWidth - resizeValue,offset:leftWidth + resizeValue}}
+            md={{span: rightWidth,offset:leftWidth}}
             style={rightStyle}
           >
             <h1 style={h1Style}>
-              {' '}
               <em>
                 <b>Work in progress !</b>
               </em>

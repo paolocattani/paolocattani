@@ -31,20 +31,16 @@ export default class Home extends React.Component<iProps> {
           <Card.Body>
             <ListGroup variant="flush">
               <ListGroup.Item>
-                {' '}
-                Phone :{' '}
+                Phone :
                 <em>
-                  {' '}
-                  <b>+39 XXX XXXX XXX</b>{' '}
+                  <b>+39 XXX XXXX XXX</b>
                 </em>
               </ListGroup.Item>
               <ListGroup.Item>
-                {' '}
-                Email :{' '}
+                Email :
                 <em>
-                  {' '}
-                  <b>paolocattani0501@gmail.com</b>{' '}
-                </em>{' '}
+                  <b>paolocattani0501@gmail.com</b>
+                </em>
               </ListGroup.Item>
               <ListGroup.Item>
                 <LinkWithIcon
