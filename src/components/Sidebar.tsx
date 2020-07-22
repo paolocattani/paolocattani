@@ -13,7 +13,7 @@ interface iProps {
 
 // Style consts
 
-const botStyle:CSSProperties = { 
+const bottomLinkStyle:CSSProperties = { 
   margin: '1vh auto' ,
   display: 'flex',
   justifyContent: 'space-between',
@@ -22,11 +22,10 @@ const botStyle:CSSProperties = {
 const listGroupStyle :CSSProperties= {
   width: '80%',
   display: 'flex',
-  margin: '4vh auto',
-  justifyContent : 'space-between'
+  margin: 'auto',
 };
 const listGroupItemStyle:CSSProperties= { backgroundColor: 'inherit', color: 'white' };
-const divStyle:CSSProperties = {
+const sidebarStyle:CSSProperties = {
   height: '100%',
   // Diplay
   WebkitAlignItems: 'flex-start' /* Safari 7.0+ */,
@@ -46,12 +45,13 @@ const Sidebar: React.SFC<iProps> = props => {
     borderRadius : '5px'
   };
 
-  return (
-    <div style={divStyle}>
+  return ( 
+    <div style={sidebarStyle}>
       {/* Image */}
       <Image style={imageStyle} src={profile_image} thumbnail />
+      <h2><i><b> Paolo Cattani </b></i></h2>
       {/* List */}
-      <ListGroup style={listGroupStyle}>
+      <ListGroup style={listGroupStyle} variant="flush">
         <ListGroup.Item style={listGroupItemStyle}>
           <InternalLink link="#Home"> Home </InternalLink>
         </ListGroup.Item>
@@ -73,7 +73,7 @@ const Sidebar: React.SFC<iProps> = props => {
       </ListGroup>
 
       {/* External Link */}
-      <div style={botStyle}>
+      <div style={bottomLinkStyle}>
         <LinkWithIcon
           link="https://www.facebook.com/paolo.cattani.9"
           icon={['fab', 'facebook-f']}

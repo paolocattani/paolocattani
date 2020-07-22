@@ -10,7 +10,6 @@ function HeaderComponent()
         <button onClick={() => i18n.changeLanguage('de')}>de</button>
         <button onClick={() => i18n.changeLanguage('en')}>en</button>
     </div>
-  );
 }
 
 
@@ -25,3 +24,4 @@ function App() {
 }
 
 export default App;
+ 

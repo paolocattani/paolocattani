@@ -94,7 +94,7 @@ const App: React.FC = () => {
                 <b>Work in progress !</b>
               </em>
             </h1>
-            <Home id={'Home'} />
+            <Home />
             <Software id={'Software'} />
             <Contacts id={'Study'} />
             <Contacts id={'Contacts'} />
