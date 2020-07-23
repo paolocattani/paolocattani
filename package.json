@@ -27,6 +27,7 @@
     "react-dom": "^16.13.1",
     "react-fontawesome": "^1.7.1",
     "react-i18next": "^11.7.0",
+    "react-moment": "^0.9.7",
     "react-scripts": "^3.4.1",
     "typescript": "^3.9.7"
   },

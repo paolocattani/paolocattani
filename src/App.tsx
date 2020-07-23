@@ -4,13 +4,11 @@ import React, { useEffect, useState,CSSProperties } from 'react';
 // Boostrap
 import { Container, Col, Row } from 'react-bootstrap';
 // Components
-import { Contacts, Sidebar, Home, Software } from './components';
+import { Contacts, Sidebar, Home, Experience } from './components';
 
 // Style
 import commonStyle from './style/common.module.scss';
 import appStyle from './style/app.module.scss';
-
-
 
 // Interface
 interface appState {
@@ -34,8 +32,8 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <Container fluid>
-        <Row  className={appStyle.container}>
+      <Container fluid className={appStyle.container}>
+        <Row>
           <Col md={2} className={appStyle.sidebarContainer}>
             <Sidebar color={sidebar2ndColor} />
           </Col>
@@ -44,7 +42,7 @@ const App: React.FC = () => {
               <em><b>Work in progress !</b></em>
             </h1>
             <Home />
-            
+            <Experience />
           </Col>
         </Row>
       </Container>
