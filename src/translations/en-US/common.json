@@ -1,3 +1,11 @@
 {
-	"contacts": "Contacts"
+	"email": "paolocattani0501@gmail.com",
+	"sidebar": {
+		"contacts": "Contacts",
+		"education": "Education",
+		"experience": "Excperience",
+		"home": "Home",
+		"portfolio": "Portfolio",
+		"softwares": "Software"
+	}
 }

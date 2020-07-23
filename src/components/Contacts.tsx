@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, ListGroup, Accordion } from 'react-bootstrap';
-import LinkWithIcon from './LinkWithIcon';
 
 // Props interface
 interface iProps {
@@ -35,40 +34,18 @@ class Contacts extends React.Component<iProps> {
               <Card.Body>
                 <ListGroup variant="flush">
                   <ListGroup.Item>
-                    {' '}
-                    Phone :{' '}
+                    
+                    Phone :
                     <em>
-                      {' '}
-                      <b>+39 XXX XXXX XXX</b>{' '}
+                      
+                      <b>+39 XXX XXXX XXX</b>
                     </em>
                   </ListGroup.Item>
                   <ListGroup.Item>
-                    {' '}
-                    Email :{' '}
+                    Email :
                     <em>
-                      {' '}
-                      <b>paolocattani0501@gmail.com</b>{' '}
-                    </em>{' '}
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <LinkWithIcon
-                      link="https://www.facebook.com/paolo.cattani.9"
-                      icon={['fab', 'facebook-f']}
-                      color={'black'}
-                      size="2x"
-                    />
-                    <LinkWithIcon
-                      link="https://github.com/paolocattani"
-                      icon={['fab', 'github-alt']}
-                      color={'black'}
-                      size="2x"
-                    />
-                    <LinkWithIcon
-                      link="https://www.linkedin.com/in/paolo-cattani-5913a5127/"
-                      icon={['fab', 'linkedin-in']}
-                      color={'black'}
-                      size="2x"
-                    />
+                      <b>paolocattani0501@gmail.com</b>
+                    </em>
                   </ListGroup.Item>
                 </ListGroup>
               </Card.Body>

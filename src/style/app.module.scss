@@ -1,0 +1,26 @@
+.container {
+    margin: 0;
+    background-position: top;
+    background-repeat: repeat;
+    background: url('../images/background.jpeg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.sidebarContainer {
+    top: 0;
+    left: 0;
+    height: 100%;
+    position: fixed;
+    background-color: #ff8400;
+}
+
+.rightSide {
+    display: flex;
+    flex-direction: column;
+    text-align: -webkit-center;
+}

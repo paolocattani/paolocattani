@@ -1,0 +1,43 @@
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content : space-between
+}
+
+.linkList {
+    margin: 1vh auto ;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container img {
+    max-width: 10vw;
+    border: solid 0.5px white;
+    margin: 4vh auto;
+    border-radius : 5px
+}
+
+.container h2 {
+    margin: 1vh auto ;
+    width: 80%
+}
+
+.sectionList {
+    width: 80%;
+    display: flex;
+    margin: auto;
+}
+
+.sectionList div{
+    background-color: inherit; 
+
+}
+.sectionList div a {
+    background-color: inherit; 
+    color: white;
+    font-size: 100%;
+    font-weight: bold;
+}
