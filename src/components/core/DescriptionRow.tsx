@@ -18,7 +18,7 @@ const DescriptionRow:React.FC<DescriptionRowProps> = ({label,description, transl
             <Col sm={3} className={'border-right border-secondary text-white text-right pr-4 ' }>
                 {description ? <em>{tLabel}</em> : <h2 className={commonStyle.primaryColor}>{tLabel}</h2>}
             </Col>
-            {tDescription ? <Col sm={9} className={'text-justify text-white '}>
+            {tDescription ? <Col sm={7} className={'text-justify text-white '}>
                 {tDescription}
             </Col> : null }
         </Row>

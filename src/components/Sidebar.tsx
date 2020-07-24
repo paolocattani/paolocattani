@@ -39,6 +39,7 @@ const Sidebar: React.FC<SidebarProps> = () => {
 
       {/* Name */}
       <h2 ><i><b> Paolo Cattani </b></i></h2>
+      <h5 ><i>paolocattani0501@gmail.com</i></h5>
 
       {/* List */}
       <ListGroup className={sidebarStyle.sectionList} variant="flush">

@@ -1,5 +1,5 @@
 // React
-import React, { useEffect, useState,CSSProperties } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // Boostrap
 import { Container, Col, Row } from 'react-bootstrap';
@@ -8,13 +8,6 @@ import { Sidebar, Contacts, Experience, Education, Skill } from './components';
 
 // Style
 import appStyle from './style/app.module.scss';
-
-// Interface
-interface appState {
-  isSidebarVisibile: boolean;
-}
-
-const h1Style:CSSProperties = { color: 'yellow', fontSize: '6vh', margin:'10vh auto'};
 
 // Application
 const App: React.FC = () => {
@@ -34,12 +27,6 @@ const App: React.FC = () => {
           <Sidebar/>
         </Col>
         <Col md={{span: 8,offset:3}}>
-          
-          <h1 style={h1Style}>
-            <em><b>Work in progress !</b></em>
-          </h1>
-
-
           <Contacts />
           <Experience />
           <Education />
