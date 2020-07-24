@@ -29,7 +29,7 @@ const education:Array<Education> = [{
 ];
 
 const Education:React.FC<EducationProps> = () =>
-  <Card border={'warning'} className={`text-center ${commonStyle.darkBackground}`} id={'education'}>
+  <Card border={'warning'} className={`text-center my-4 mx-auto ${commonStyle.darkBackground}`} id={'Education'}>
     <Card.Header className={'text-white'}>
       <h1>
         <b> Istruzione e Formazione </b>

@@ -1,8 +1,6 @@
 // React
 import React,{StrictMode} from 'react';
 import ReactDOM from 'react-dom';
-// Style
-import './style/index.css';
 // Components
 import App from './App';
 

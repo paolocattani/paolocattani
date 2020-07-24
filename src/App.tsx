@@ -14,7 +14,7 @@ interface appState {
   isSidebarVisibile: boolean;
 }
 
-const h1Style:CSSProperties = { color: 'yellow', fontSize: '6vh' };
+const h1Style:CSSProperties = { color: 'yellow', fontSize: '6vh', margin:'10vh auto'};
 
 // Application
 const App: React.FC = () => {
@@ -33,10 +33,13 @@ const App: React.FC = () => {
         <Col md={2} className={appStyle.sidebar}>
           <Sidebar/>
         </Col>
-        <Col md={{span: 8,offset:3}} className={appStyle.body}>
+        <Col md={{span: 8,offset:3}}>
+          
           <h1 style={h1Style}>
             <em><b>Work in progress !</b></em>
           </h1>
+
+
           <Contacts />
           <Experience />
           <Education />
