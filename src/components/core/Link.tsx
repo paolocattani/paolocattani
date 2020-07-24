@@ -5,13 +5,12 @@ interface LinkProps {
 }
 
 const Link:React.FC<LinkProps> = ({link, children}) => (
-  <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {children}
-      </a>
+  <a href={link}
+    target={link.startsWith('#') ? undefined : "_blank"}
+    rel={link.startsWith('#') ? undefined : "noopener noreferrer"}
+  >
+    {children}
+  </a>
 );
 
 export default Link;

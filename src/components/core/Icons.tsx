@@ -13,7 +13,7 @@ interface AbstractIconProps extends IconProps {
 }
 
 const SOLID = 'fas';
-const REGULAR = 'far';
+// const REGULAR = 'far';
 const BRAND = 'fab';
 
 // Wrapper per icone FontAwesome

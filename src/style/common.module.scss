@@ -1,0 +1,18 @@
+@import './constants.scss';
+
+
+.darkBackground {
+  background-color: $dark-color;
+}
+
+.card label {
+    color : white;
+}
+
+.card input {
+    color : white;
+}
+
+.card textarea {
+    color : white;
+}

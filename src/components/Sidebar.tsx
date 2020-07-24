@@ -10,15 +10,13 @@ import { EnvelopeIcon, LinkedinIcon, FacebookIcon, GithubIcon } from './core/Ico
 import sidebarStyle from '../style/sidebar.module.scss';
 
 // Interface
-interface SidebarProps {
-  color: string;
-}
+interface SidebarProps {}
 
 const sections = [
   { link :'#Home',label:'sidebar.home', key:'key_Home'},
   { link :'#Experience',label:'sidebar.experience',key:'key_Experience' },
   { link :'#Education',label:'sidebar.education',key:'key_Education' },
-  { link :'#Knowledge',label:'sidebar.softwares',key:'key_Knowledge' },
+  { link :'#Skill',label:'sidebar.skill',key:'key_Skill' },
   { link :'#Portfolio',label:'sidebar.portfolio',key:'key_Portfolio' },
   { link :'#Contacts',label:'sidebar.contacts',key:'key_Contacts' }
 ]
@@ -31,7 +29,7 @@ const links = [
 
 ]
 
-const Sidebar: React.FC<SidebarProps> = props => {
+const Sidebar: React.FC<SidebarProps> = () => {
   const [t] = useTranslation('common');
 
   return (
