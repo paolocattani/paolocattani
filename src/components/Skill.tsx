@@ -25,9 +25,10 @@ const software:Array<Skill> = [
   {label:'BackEnd', description: formatSkill(['<h>Java EE/Jackarta','NodeJs','Maven','Struts2','Hibernate'])},
   {label:'Database', description:formatSkill(['IBM Db2','MS Sql Server','Oracle','Postgres','mysql','maria'])},
   {label:'Sql', description:formatSkill(['Sql','<h>PL/SQL','T-SQL'])},
-  {label:'Pattern', description:formatSkill(['SOA','MVC','DDD'])},
+  {label:'Pattern Architetturali', description:formatSkill(['SOA (SOAP/WSLD, RESTful)','MVC','DDD','Client-Server','Event-source (WebSocket/SSE)'])},
+  {label:'Design Pattern', description:formatSkill(['Singleton','Builder','Decorator','Observer'])},
   {label:'Shell Script', description:formatSkill(['Batch ( Windows )','Bash ( Unix )'])},
-  {label:'Altro', description:formatSkill(['Markdown'])}, 
+  {label:'Altro', description:formatSkill(['Markdown'])},
 ];
 
 const architecture:Array<Skill> =[
