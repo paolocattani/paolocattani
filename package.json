@@ -21,7 +21,7 @@
     "lint-staged": "^8.2.1",
     "node-sass": "^4.14.1",
     "popper.js": "^1.16.1",
-    "prettier": "^1.19.1",
+    "prettier": "^2.2.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.2.2",
     "react-dom": "^16.13.1",
