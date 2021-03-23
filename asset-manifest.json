@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/paolocattani/static/css/main.80d14e99.chunk.css",
+    "main.js": "/paolocattani/static/js/main.95638397.chunk.js",
+    "main.js.map": "/paolocattani/static/js/main.95638397.chunk.js.map",
+    "runtime-main.js": "/paolocattani/static/js/runtime-main.1f5e8c33.js",
+    "runtime-main.js.map": "/paolocattani/static/js/runtime-main.1f5e8c33.js.map",
+    "static/js/2.a6068dd4.chunk.js": "/paolocattani/static/js/2.a6068dd4.chunk.js",
+    "static/js/2.a6068dd4.chunk.js.map": "/paolocattani/static/js/2.a6068dd4.chunk.js.map",
+    "index.html": "/paolocattani/index.html",
+    "precache-manifest.eb4f1576343568ab37c37dcfe9b013d0.js": "/paolocattani/precache-manifest.eb4f1576343568ab37c37dcfe9b013d0.js",
+    "service-worker.js": "/paolocattani/service-worker.js",
+    "static/css/main.80d14e99.chunk.css.map": "/paolocattani/static/css/main.80d14e99.chunk.css.map",
+    "static/js/2.a6068dd4.chunk.js.LICENSE.txt": "/paolocattani/static/js/2.a6068dd4.chunk.js.LICENSE.txt",
+    "static/media/app.module.scss": "/paolocattani/static/media/background.26494bf3.jpeg",
+    "static/media/profile-image.jpeg": "/paolocattani/static/media/profile-image.426d13d8.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1f5e8c33.js",
+    "static/js/2.a6068dd4.chunk.js",
+    "static/css/main.80d14e99.chunk.css",
+    "static/js/main.95638397.chunk.js"
+  ]
+}
