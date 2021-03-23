@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import commonStyle from '../style/common.module.scss'
+import {cardStyle} from './core/Constant';
 import DescriptionRow from './core/DescriptionRow';
 
 interface ExperienceProps {}
@@ -32,7 +32,7 @@ const experiences:Array<Experience> = [{
 ];
 
 const Experience:React.FC<ExperienceProps> = () =>
-        <Card border={'warning'} className={`text-center ${commonStyle.darkBackground}`} id={'Experience'}>
+        <Card border={'warning'} className={cardStyle} id={'Experience'}>
           <Card.Header className={'text-white'}>
             <h1>
               <b> Esperienza Lavorativa </b>

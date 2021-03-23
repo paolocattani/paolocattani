@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 
 // Boostrap
-import { Container, Col, Row } from 'react-bootstrap';
+import { Container,  Row, Col } from 'react-bootstrap';
 // Components
 import { Sidebar, Contacts, Experience, Education, Skill } from './components';
 
@@ -20,19 +20,11 @@ const App: React.FC = () => {
     return () => window.removeEventListener('resize', handleWindowResize);
   });
 
+  const components = [<Sidebar/>,<Contacts />,<Experience />,<Education />,<Skill />];
+
   return (
     <Container fluid className={appStyle.container}>
-      <Row>
-        <Col md={2} className={appStyle.sidebar}>
-          <Sidebar/>
-        </Col>
-        <Col md={{span: 8,offset:3}}>
-          <Contacts />
-          <Experience />
-          <Education />
-          <Skill />
-        </Col>
-      </Row>
+      {components.map(c => <Row className={'h-100'}><Col sm={12} className={'my-auto'}>{c}</Col></Row>)}
     </Container>
   );
 };

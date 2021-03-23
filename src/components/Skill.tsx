@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import commonStyle from '../style/common.module.scss'
+import {cardStyle} from './core/Constant';
 import skillStyle from '../style/skill.module.scss'
 import DescriptionRow from './core/DescriptionRow';
 
@@ -47,7 +47,7 @@ const tools:Array<Skill> = [
 ];
 
 const Skill:React.FC<SkillProps> = () =>
-  <Card border={'warning'} className={`text-center my-4 mx-auto ${commonStyle.darkBackground}`} id={'Skill'}>
+  <Card border={'warning'} className={cardStyle} id={'Skill'}>
     <Card.Header className={'text-white'}>
       <h1><b> Competenze tecniche  </b></h1>
     </Card.Header>

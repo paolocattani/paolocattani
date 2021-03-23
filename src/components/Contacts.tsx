@@ -1,12 +1,12 @@
 import React,{CSSProperties} from 'react';
 import { Card } from 'react-bootstrap';
-import commonStyle from '../style/common.module.scss'
+import {cardStyle} from './core/Constant';
 // Props interface
 interface HomeProps {}
 
 const h1Style:CSSProperties = { color: 'yellow', fontSize: '6vh', margin:'10vh auto'};
 const Contacts:React.FC<HomeProps> = () =>
-    <Card border={'warning'} className={`text-center my-4 mx-auto ${commonStyle.darkBackground}`} id={'Contacts'}>
+    <Card border={'warning'} className={cardStyle} id={'Contacts'}>
         <Card.Header className="text-white">
           <h1 style={h1Style}>
               <em><b>Work in progress !</b></em>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import commonStyle from '../style/common.module.scss'
+import {cardStyle} from './core/Constant';
+
 import DescriptionRow from './core/DescriptionRow';
 
 interface EducationProps {}
@@ -29,7 +30,7 @@ const education:Array<Education> = [{
 ];
 
 const Education:React.FC<EducationProps> = () =>
-  <Card border={'warning'} className={`text-center my-4 mx-auto ${commonStyle.darkBackground}`} id={'Education'}>
+  <Card border={'warning'} className={cardStyle} id={'Education'}>
     <Card.Header className={'text-white'}>
       <h1>
         <b> Istruzione e Formazione </b>
