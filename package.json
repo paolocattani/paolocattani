@@ -19,7 +19,7 @@
     "i18next": "^19.8.4",
     "i18next-browser-languagedetector": "^5.0.0",
     "jquery": "^3.5.1",
-    "lint-staged": "^8.2.1",
+    "lint-staged": "^11.1.0",
     "node-sass": "^4.14.1",
     "popper.js": "^1.16.1",
     "prettier": "^2.2.1",
