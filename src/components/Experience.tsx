@@ -14,20 +14,33 @@ interface Experience {
 }
 
 const experiences:Array<Experience> = [{
-    from: 'Settembre 2019',
+    from: 'Novembre 2023',
     to:null,
-    company:'E.B.S. Consulting s.r.l.',
-    role:'Full-Stack dev',
-    description:<p>Full-Stack developer : Devops ( Docker, CI, CD GitLab ), BackEnd ( Java EE/jakarta, hiberante, Struts2 ).<br/>
-    Web ( Java jsp, HTML, CSS, javascript )</p>
+    company:'GTN SPA (Udine)',
+    role:'Technical Director',
+    description:<p>Realizzo la soluzione ERP per la grande distribuzione alimentare e ho costruito il team di sviluppo da zero.<br/>
+    SOA su Kubernetes, NestJS, gRPC, HTTP, RabbitMQ, React, Redux, RTK, RTK Query, AWS</p>
   },{
-    from: 'Luglio 2015',
+    from: 'Aprile 2020',
+    to: 'Novembre 2023',
+    company:'Tecma Solutions SPA (Milano)',
+    role:'Tech Lead',
+    description:<p>Ho coordinato 3 team di sviluppo, 1 team QA e 1 team di infrastruttura, garantendo standard di qualita elevati sulla piattaforma SaaS aziendale.<br/>
+    Microservizi su Kubernetes, GitLab CI/CD, Node.js, GraphQL, NestJS, React, Redux, TDD, BDD, DDD</p>
+  },{
+    from: 'Settembre 2019',
+    to: 'Aprile 2020',
+    company:'EBS Consulting (Padova)',
+    role:'Software Engineer',
+    description:<p>Piattaforma enterprise per colonnine di ricarica. Sistema di pagamento distribuito con job asincroni su Quartz e SQL.<br/>
+    Java EE, JBoss, Quarkus</p>
+  },{
+    from: 'Giugno 2015',
     to: 'Agosto 2019',
-    company:'Sanmarco Informatica SPA ',
-    role:'Developer',
-    description:<p>Analisi e sviluppo personalizzazioni software per ciascun cliente. Utilizzo linguaggio SQL/RPGILE su server IBM.
-    Personalizzazioni lato client in linguaggio Java; installazione e gestione VM Windows e Linux per software integrativi al gestionale.
-    Organizzazione lavoro tramite metodo Agile</p>
+    company:'Sanmarco Informatica (Padova)',
+    role:'Software Developer & Consultant',
+    description:<p>Soluzioni specializzate per i clienti sulla piattaforma ERP aziendale. Integrazione con magazzino semi-autonomo dal ricevimento alla consegna.<br/>
+    Servizi SOAP, picking e packing</p>
   }
 ];
 
@@ -47,7 +60,8 @@ const Experience:React.FC<ExperienceProps> = () =>
                   <DescriptionRow label="Ruolo"   translate={false} description={e.role}/>
                   <DescriptionRow label="Impiego" translate={false} description={e.description}/>
                 </>
-              ))}
+              ))
+            }
           </Card.Body>
         </Card>;
 

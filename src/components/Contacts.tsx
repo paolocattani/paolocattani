@@ -1,24 +1,28 @@
 import React,{CSSProperties} from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, ListGroup } from 'react-bootstrap';
 import {cardStyle} from './core/Constant';
+
 // Props interface
 interface HomeProps {}
 
-const h1Style:CSSProperties = { color: 'yellow', fontSize: '6vh', margin:'10vh auto'};
 const Contacts:React.FC<HomeProps> = () =>
     <Card border={'warning'} className={cardStyle} id={'Contacts'}>
         <Card.Header className="text-white">
-          <h1 style={h1Style}>
-              <em><b>Work in progress !</b></em>
-            </h1>
+          <h1><b>Contatti</b></h1>
         </Card.Header>
         <Card.Body className="text-white">
           <p><cite><strong>
-            La programmazione è una delle mie passioni e per questo non smetto mai di studiare ed apprendere nuove competenze.
-            Conosco molto bene Java ( SE, EE ) e ho lavorato con Hibernate ( 4 e 5 ), Struts2 e Spring. In generale me la cavo bene con i Db relazionali ( DB2 , MS Sql, mySql/maria , Oracle ), meno con No-Sql .
-            Negli ultimi anni sto utilizzando molto l'ecosistema React/ Nodejs ( React / Redux / Redux-Saga/ Nodejs / Express , Sequelize ) quindi ho una buona conoscenza di javascript , typescript, CSS e HTML, ( utilizzo sempre le piu recenti funzionalità grazie a Babel )
-            In fine conosco la parte di infrastruttura ( JBoss da 6.4 a Wildfly 16 , Tomcat, Nginx ) , CI/CD ( Gitlab Runners su Docker ) e Container( per architetture a Microservizi e MicroFrontend ).
-            </strong></cite></p>
+            Trasformo idee incerte in prodotti che le persone possono usare: parto da una richiesta ancora astratta e la porto a un sistema concreto, seguendo tutto il filo. Dominio, architettura, backend, frontend e infrastruttura, senza perdere di vista il prodotto.
+          </strong></cite></p>
+          <p>If you have a problem that is still open, write to me.</p>
+          <ListGroup variant="flush">
+            <ListGroup.Item action href="https://www.paolocattani.me/" target="_blank" className="bg-transparent text-white">Sito: paolocattani.me</ListGroup.Item>
+            <ListGroup.Item action href="https://www.paolocattani.me/cv/CV_Paolo_Cattani.pdf" target="_blank" className="bg-transparent text-white">Download CV</ListGroup.Item>
+            <ListGroup.Item action href="https://www.linkedin.com/in/paolo-cattani" target="_blank" className="bg-transparent text-white">LinkedIn</ListGroup.Item>
+            <ListGroup.Item action href="https://github.com/paolocattani" target="_blank" className="bg-transparent text-white">GitHub</ListGroup.Item>
+            <ListGroup.Item action href="https://health.paolocattani.me/" target="_blank" className="bg-transparent text-white">Vital</ListGroup.Item>
+            <ListGroup.Item action href="mailto:paolocattani0501@gmail.com" className="bg-transparent text-white">paolocattani0501@gmail.com</ListGroup.Item>
+          </ListGroup>
         </Card.Body>
       </Card>
 
