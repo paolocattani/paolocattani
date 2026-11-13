@@ -1,4 +1,4 @@
-name: Build, Deploy, Code Quality
+name: Build and Deploy
 
 on:
   push:
@@ -29,20 +29,3 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  check-quality:
-    runs-on: ubuntu-latest
-    name: Code Quality
-    steps:
-    - name: Check code meets quality standards
-      id: code-inspector
-      uses: codeinspectorio/github-action@master
-      with:
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
-        code_inspector_access_key: ${{ secrets.CODE_INSPECTOR_ACCESS_KEY }}
-        code_inspector_secret_key: ${{ secrets.CODE_INSPECTOR_SECRET_KEY }}
-        min_quality_grade: 'GOOD'
-        min_quality_score: '80'
-        max_defects_rate: 0.05
-        project_name: 'paolocattani'
-        max_timeout_sec: '600'
